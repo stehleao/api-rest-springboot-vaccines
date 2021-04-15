@@ -23,11 +23,6 @@ public class VaccineController {
     this.repository = repository;
   }
 
-  @GetMapping
-  public List<Vaccine> findAll() {
-    return repository.findAll();
-  }
-
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
   public Vaccine create(@RequestBody Vaccine vaccine) {
